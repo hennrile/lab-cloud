@@ -1,0 +1,13 @@
+import hinhhoc_helper as h
+dt_hcn = h . dientich_hcn (6, 4)
+cv_hcn = h . chuvi_hcn (6, 4)
+dt_tg = h . dientich_tamgiac (6, 4)
+cv_tg = h . chuvi_tamgiac (6, 4, 2)
+dt_ht = h . dientich_hinhtron (6)
+cv_ht = h . chuvi_hinhtron (6)
+print ( f"Diện tích hình chữ nhật là : {dt_hcn}")
+print ( f"Chu vi HÌnh chữ nhật là : {cv_hcn}")
+print ( f"Diện tích hình tam giác là : {dt_tg}")
+print ( f"Chu vi hình tam giác là : {cv_tg}")
+print ( f"Diện tích hÌnh tròn là : {dt_ht}")
+print ( f"Chu vi hình tròn là : {cv_ht}")
