@@ -1,14 +1,10 @@
-def fizzBuzz(n):
-    for i in range(n + 1):
-        if i % 3 == 0 and i % 5 == 0:
-            print("FizzBuzz")
-        elif i % 3 == 0:
-            print("Fizz")
-        elif i % 5 == 0:
-            print("Buzz")
-        else:
-            print(i)
-    
-if __name__ == '__main__':
-    n = int(input())
-    fizzBuzz(n)
+a = int(input("Toán: "))
+b = int(input("Văn: "))
+c = int(input("Anh: "))
+
+total = a + b + c
+
+if total / 3 >= 5:
+    print("may dau")
+else:
+    print("Chan trau")
