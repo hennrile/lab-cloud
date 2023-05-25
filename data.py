@@ -48,7 +48,6 @@ class Hoc_Sinh:
         print(f"Max grade: {max}")
         print(f"Min grade: {min}")
 
-
 sinh_vien = Hoc_Sinh()
 
 while True:
