@@ -1,6 +1,6 @@
 from typing import Any
 import os
-
+# Khai báo class Học Sinh
 class Hoc_Sinh:
     global grade 
     grade = []
@@ -10,7 +10,7 @@ class Hoc_Sinh:
         self.Toan = Toan
         self.Van = Van
         self.Anh = Anh
-    
+
     def Nhap_Thong_Tin(self):
         self.mssv = input("Nhap mssv cua ban: ")
         self.Ten = input("Nhap Ten: ")
@@ -36,7 +36,7 @@ class Hoc_Sinh:
         else:
             print(f"Diem cua ban la: {(self.Toan + self.Van + self.Anh) / 3}")
             print("Rot")
-
+    #Xuất điểm cao, thấp
     def High_Low_Grade(self):
         max = 0.0
         min = 10.0
@@ -49,8 +49,8 @@ class Hoc_Sinh:
         print(f"Min grade: {min}")
 
 sinh_vien = Hoc_Sinh()
-
-while True:
+#Menu chọn 
+while True:         
     for i in grade:
         # print(i)
         with open("test.txt", "a+") as f:
