@@ -10,7 +10,7 @@ class Hoc_Sinh:
         self.Toan = Toan
         self.Van = Van
         self.Anh = Anh
-
+    #Hàm nhập thông tin 
     def Nhap_Thong_Tin(self):
         self.mssv = input("Nhap mssv cua ban: ")
         self.Ten = input("Nhap Ten: ")
@@ -21,7 +21,7 @@ class Hoc_Sinh:
         self.Anh = float(input("Nhap diem Anh: "))
         grade.append(self.Anh)
 
-
+    #Hàm In Thông Tin Học Sinh
     def Show_info(self):
         print(f"MSSV: {self.mssv}")
         print(f"Ten: {self.Ten}")
@@ -50,7 +50,8 @@ class Hoc_Sinh:
 
 sinh_vien = Hoc_Sinh()
 #Menu chọn 
-while True:         
+while True:     
+    #Chạy file và ghi dữ liệu vào File data.txt
     for i in grade:
         # print(i)
         with open("test.txt", "a+") as f:
@@ -65,7 +66,7 @@ while True:
         3. Diem Trung Binh
         4. Diem cao nhat va thap nhat
         5. Thoat''')
-        
+        #Chọn chức năng
         x = int(input("Choose(number): "))
 
         if x == 1:
@@ -78,6 +79,6 @@ while True:
             sinh_vien.High_Low_Grade()
         elif x == 5:
             quit()
-    
+    #Chạy hàm show
     show()
 
