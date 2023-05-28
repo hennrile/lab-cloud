@@ -75,7 +75,7 @@ if index == 0:
     child_process.expect('Password')
     child_process.sendline(password)
 else:
-    print("EOF error occurred")
+    print("wrong user name or passcode")
 
 print('returned value:', returned_value)
 
