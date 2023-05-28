@@ -50,9 +50,10 @@
 import subprocess
 from pexpect import popen_spawn
 import pexpect
+from getpass import getpass
 
 user = input("Enter username: ")
-password = input("Password: ")
+password = getpass("Enter password: ")
 
 cmd = "cd C:\\Users\\TGDD\\Documents\\GitHub\\lad-cloud\\data\\test_github.txt"
 returned_value = subprocess.call(cmd, shell=True)  # returns the exit code in unix
