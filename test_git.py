@@ -35,7 +35,7 @@ subprocess.call(cmd, shell=True)
 cmd = 'git commit -m "python project update"'
 subprocess.call(cmd, shell=True)
 
-cmd = "git remote set-url origin https://github.com/hennrile/lab-cloud"
+cmd = "git remote set-url origin hennrile/lab-cloud"
 subprocess.call(cmd, shell=True)
 
 cmd = "git push "
