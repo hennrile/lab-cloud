@@ -53,10 +53,12 @@ import pexpect
 from getpass import getpass
 
 user = input("Enter username: ")
+#passcode ẩn, Nếu muốn hiện thay getpass bằng input
 password = getpass("Enter password: ")
 
+#Vị trí file
 cmd = "cd C:\\Users\\TGDD\\Documents\\GitHub\\lad-cloud\\data\\test_github.txt"
-returned_value = subprocess.call(cmd, shell=True)  # returns the exit code in unix
+returned_value = subprocess.call(cmd, shell=True) #Lệnh cd 
 
 cmd = "git add ." 
 subprocess.call(cmd, shell=True)
