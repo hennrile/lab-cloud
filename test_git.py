@@ -48,7 +48,7 @@
 # print('end of commands')
 
 import subprocess
-from pexpect import popen_spawn
+import pexpect
 
 user = 'HQHuy'
 password = '2345Nbvc'
@@ -66,7 +66,7 @@ cmd = "git remote set-url origin https://github.com/hennrile/lab-cloud"
 subprocess.call(cmd, shell=True)
 
 cmd = "git push "
-child_process = popen_spawn.PopenSpawn(cmd)
+child_process = pexpect.popen_spawn.PopenSpawn(cmd)
 index = child_process.expect(['User', pexpect.EOF])
 if index == 0:
     child_process.sendline(user)
