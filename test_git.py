@@ -49,6 +49,7 @@
 
 import subprocess
 from pexpect import popen_spawn
+import pexpect
 
 user = 'HQHuy'
 password = '2345Nbvc'
