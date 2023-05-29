@@ -57,7 +57,7 @@ user = input("Enter username: ")
 password = getpass("Enter password: ")
 
 #Vị trí file
-cmd = "cd C:\\Users\\TGDD\\Documents\\GitHub\\lad-cloud\\data"
+cmd = "cd C://User//TGDD//Documents//Github//lad-cloud//data"
 returned_value = subprocess.call(cmd, shell=True) #Lệnh cd 
 
 cmd = "git add ." 
