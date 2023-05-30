@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Tính điểm trung bình</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="container">
+	<div class="container">
+		<h1>Tính điểm trung bình và xếp loại</h1>
+		<form>
+			<label for="mssv"><b>MSSV</b></label>
+			<input type="text" id="mssv" name="mssv" required><br>
+
+			<label for="ten"><b>Họ và tên</b> </label>
+			<input type="text" id="ten" name="ten" required><br>
+
+			<label for="toan"><b>Điểm Toán</b>:</label>
+			<input type="number" id="toan" name="toan" min="0" max="10" required><br>
+
+			<label for="van"><b>Điểm Văn</b>:</label>
+			<input type="number" id="van" name="van" min="0" max="10" required><br>
+
+			<label for="anh"><b>Điểm Anh</b>:</label>
+			<input type="number" id="anh" name="anh" min="0" max="10" required><br>
+
+			<div id="button">
+				<button type="button" id ="tinhdiem" onclick="tinhDiem()">Tính điểm</button>
+				<button type="button" id="taixuong" onclick="">Tải xuống</button>
+			</div>
+		</form>
+
+		<div id="diemTB"></div>
+	</div>
+
+	<!-- <script src="mark.js"></script> -->
+</body>
+</html>
