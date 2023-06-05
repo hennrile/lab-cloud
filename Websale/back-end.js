@@ -1,28 +1,31 @@
-const express = require('express')
-const app = express()
-const router = express.Router()
+let btn = document.querySelector(".mainBtn");
+let mbtn = document.querySelector(".minusBtn");
+let pbtn = document.querySelector(".plusBtn");
 
-function handleRequest(req, res) {
-  const deviceType = req.get('User-Agent')
-  let responseMsg = ''
-
-  if (deviceType.includes('Mobile')) {
-    responseMsg = 'Hello from mobile device!'
-  } else if (deviceType.includes('Tablet')) {
-    responseMsg = 'Hello from tablet device!'
-  } else {
-    responseMsg = 'Hello from desktop device!'
-  }
-
-  res.send(responseMsg)
-}
-
-router.get('/', handleRequest)
-
-app.use('/', router)
-
-const PORT = process.env.PORT || 3000
-
-app.listen(PORT, () => {
-  console.log(`Web server is listening on port ${PORT}`)
-})
+btn.addEventListener("click", ()=>{
+    if(btn.innerText == "ADD TO CART") {
+        btn.innerText = 1;
+        pbtn.style.display = "inline-block";
+        mbtn.style.display = "inline-block";
+    }
+});
+mbtn.addEventListener("click", ()=>{
+    if(btn.innerText == 5){
+        pbtn.style.visibility = "hidden";
+    }
+    if(btn.innerText < 2) {
+        btn.innerText = "ADD TO CART";
+        pbtn.style.visibility = "visible";
+        pbtn.style.display = "none";
+        mbtn.style.display = "none";
+    }
+    else{
+        btn.innerText = btn.innerText - 1;
+    }
+});
+pbtn.addEventListener("click", ()=>{
+    btn.innerText = +btn.innerText + +1;
+    if(btn.innerText == 5){
+        pbtn.style.visibility = "hidden";
+    }
+});
