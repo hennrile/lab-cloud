@@ -1,31 +1,8 @@
-let btn = document.querySelector(".mainBtn");
-let mbtn = document.querySelector(".minusBtn");
-let pbtn = document.querySelector(".plusBtn");
+const express = require('express');
+const app = express();
 
-btn.addEventListener("click", ()=>{
-    if(btn.innerText == "ADD TO CART") {
-        btn.innerText = 1;
-        pbtn.style.display = "inline-block";
-        mbtn.style.display = "inline-block";
-    }
-});
-mbtn.addEventListener("click", ()=>{
-    if(btn.innerText == 5){
-        pbtn.style.visibility = "hidden";
-    }
-    if(btn.innerText < 2) {
-        btn.innerText = "ADD TO CART";
-        pbtn.style.visibility = "visible";
-        pbtn.style.display = "none";
-        mbtn.style.display = "none";
-    }
-    else{
-        btn.innerText = btn.innerText - 1;
-    }
-});
-pbtn.addEventListener("click", ()=>{
-    btn.innerText = +btn.innerText + +1;
-    if(btn.innerText == 5){
-        pbtn.style.visibility = "hidden";
-    }
+app.use(express.static('public'));
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
 });

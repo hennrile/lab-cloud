@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script src="back-end.js"></script>
     <script src="https://kit.fontawesome.com/eca5337cff.js" crossorigin="anonymous"></script>
     <head>
         <div class="bgimg-1">
@@ -66,16 +67,18 @@
         </div>
       </div>
       
+
       <aside class="cart">
-        <h2>Your cart</h2>
-        <ul>
-          <li><p>your cart is emty</p></li>
+        <h2>Your Cart</h2>
+        <ul id="cart-list">
+            <li><p>Your cart is empty.</p></li>
         </ul>
-        <button id="btn-cart">View your cart</button>
+        <button id="view-cart-btn">View Cart</button>
       </aside>
     </main>
 
-    <footer>
+    <footer class="info">
+      <!-- <h2>Your info</h2>
       <form id="checkout-form">
           <label for="full-name">Full Name:</label>
           <input type="text" id="full-name" name="full-name"><br><br>
@@ -84,7 +87,18 @@
           <label for="address">Address:</label>
           <textarea id="address" name="address"></textarea><br><br>
           <button id="submit-button">Submit Order</button>
-      </form>
+      </form> -->
+      <div id="feedback-form">
+        <h2 class="header">Register Today</h2>
+        <div>
+          <form>
+            <input type="text" name="email" placeholder="Email"></input>
+            <input type="text" name="name" placeholder="Name"></input>
+            <input type="text" name="address" placeholder="address"></input>
+            <button type="submit"><br>Register</br></button>
+          </form>
+        </div>
+      </div>
   </footer>
 
 </body>
