@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Cart</title>
+  <style>
+    /* Thêm kiểu CSS cho trang giỏ hàng */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    
+    input[type="number"] {
+      width: 50px;
+      margin-right: 8px;
+    }
+    
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .total {
+      margin-top: 16px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+  
+  <form action="/" method="POST">
+    <table>
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nike Air-Force</td>
+          <td>$110</td>
+          <td><input type="number" name="quantity" min="1" max="10" value="1"></td>
+          <td>$110</td>
+          <td><button type="submit" name="delete">Delete</button></td>
+        </tr>
+        <tr>
+          <td>Nike Air-Max</td>
+          <td>$150</td>
+          <td><input type="number" name="quantity" min="1" max="10" value="2"></td>
+          <td>$300</td>
+          <td><button type="submit" name="delete">Delete</button></td>
+        </tr>
+        <!-- Add more products here -->
+      </tbody>
+    </table>
+    
+    <div class="total">
+      Total: $410
+    </div>
+    
+    <button type="submit" name="update">Update Cart</button>
+    <button type="submit" name="checkout">Checkout</button>
+  </form>
+  
+</body>
+</html>
